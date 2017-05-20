@@ -1,10 +1,8 @@
-
-
-
 #!/bin/bash
 
-git add .
-git commit -m 'A'
-x = "develop"
-echo $x
+#git add .
+#git commit -m 'A'
+x="develop"
+y="$x"
+echo $y
  
