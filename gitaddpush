@@ -2,6 +2,6 @@
 
 git add .
 git commit -m 'A'
-x = git rev-parse --abbrev-ref HEAD
+x = "develop"
 echo $x
  
