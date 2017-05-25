@@ -22,12 +22,27 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+   
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+        <style type="text/css">
+        .hide-bullets {
+            list-style: none;
+            margin-left: -40px;
+            margin-top: 20px;
+        }
+        
+        ol {
+            list-style-type: circle;
+        }
+
+    </style>
 
 </head>
 
@@ -300,27 +315,120 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    <div class="modal-body">
+                        <div class="col-md-6">
+                            <div id="slider">
+                                <!-- Top part of the slider -->
+                                <div class="row">
+                                    <div class="col-md-12" id="carousel-bounding-box">
+                                        <div class="carousel slide" id="myCarousel" data-ride="carousel">
+
+                                            <!-- Indicators -->
+                                            <ol class="carousel-indicators col-sm-12">
+                                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                                                <li data-target="#myCarousel" data-slide-to="4"></li>
+                                            </ol>
+                                            <!-- Carousel items -->
+                                            <div class="carousel-inner">
+
+                                                <div class="active item">
+                                                    <img class="img-responsive img-centered" src="img/project-photos/1.jpg" alt="image"></div>
+
+                                                <div class="item">
+                                                    <img class="img-responsive img-centered" src="img/project-photos/2.jpg" alt="image"></div>
+
+                                                <div class="item">
+                                                    <img class="img-responsive img-centered" src="img/project-photos/3.jpg" alt="image"></div>
+
+                                                <div class="item">
+                                                    <img class="img-responsive img-centered" src="img/project-photos/4.jpg" alt="image"></div>
+
+                                                <div class="item">
+                                                    <img class="img-responsive img-centered" src="img/project-photos/5.jpg" alt="image"></div>
+                                            </div>
+                                            <!-- Carousel nav -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--/Slider-->
+
+                            <div class="row hidden-xs" id="slider-thumbs" style="margin-top: 10px;">
+                                <!-- Bottom switcher of slider -->
+                                <ul class="hide-bullets" style="margin: auto;">
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-0"><img src="img/project-photos/1.jpg" alt="image"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-1"><img src="img/project-photos/2.jpg" alt="image"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-2"><img src="img/project-photos/3.jpg" alt="image"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-3"><img src="img/project-photos/4.jpg" alt="image"></a>
+                                    </li>
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-4"><img src="img/project-photos/5.jpg" alt="image"></a>
+                                    </li>
+                                </ul>
+                                
+                                <!-- Left and right controls -->
+<!--
+								<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+								  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								  <span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+								  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								  <span class="sr-only">Next</span>
+								</a>
+-->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-sm-12 col-md-12">
+                                <h3>Apple iMac MK482LL/A 27-Inch Retina 5K Display Desktop (Intel Quad-Core i5 3.3GHz, 8GB RAM, 2TB Fusion Drive, Mac OS X), Silver</h3>
+                                <hr class="star-primary">
+                                <div class="col-lg-12">
+                                    <ul class="list-inline item-details">
+                                        <li>Client:
+                                            <strong><a href="#">Start Bootstrap</a></strong>
+                                        </li>
+                                        <li>Date:
+                                            <strong><a href="#">April 2014</a></strong>
+                                        </li>
+                                        <li>Service:
+                                            <strong><a href="#">Web Development</a></strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr>
+
+                                <br>
+                                <div>Want it Wednesday, May 24? Order within 46 hrs 9 mins and choose Standard Shipping at checkout. Details Ships from and sold by Amazon.com. Gift-wrap available.</div>
+                                <ol class="list-group-item-success">
+                                    <li>3.3GHz quad-core Intel Core i5</li>
+                                    <li>Turbo Boost up to 3.9GHz</li>
+                                    <li>8GB Onboard Memory (Configurable up to 32GB)</li>
+                                    <li>2TB Fusion Drive</li>
+                                    <li>AMD Radeon R9 M395 graphics processor with 2GB of GDDR5 memory</li>
+                                    <li>27" Retina 5K Display</li>
+                                    <li>5120 x 2880 Resolution</li>
+                                    <li>3.3 GHz Intel Core i5</li>
+                                    <li>8GB of 1867 MHz DDR3 Onboard Memory</li>
+                                    <li>2TB Fusion Drive</li>
+                                    <li>AMD Radeon R9 M395 graphics processor with 2GB of GDDR5 memory</li>
+                                    <li>802.11ac Wi-Fi, Bluetooth 4.0</li>
+                                    <li>2x Thunderbolt 2 and 4x USB 3.0 Ports</li>
+                                    <li>FaceTime HD Camera, Dual Mics, Speakers</li>
+                                    <li>Mac OS X El Capitan</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -512,6 +620,33 @@
             </div>
         </div>
     </div>
+    
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            
+			$('#myCarousel').carousel({
+					interval: 5000
+			});
+		
+
+            $('#carousel-text').html($('#slide-content-0').html());
+
+            //Handles the carousel thumbnails
+            $('[id^=carousel-selector-]').click(function() {
+                var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+                var id = parseInt(id);
+                $('#myCarousel').carousel(id);
+            });
+
+
+            // When the carousel slides, auto update the text
+            $('#myCarousel').on('slid.bs.carousel', function(e) {
+                var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-' + id).html());
+            });
+        });
+
+    </script>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
