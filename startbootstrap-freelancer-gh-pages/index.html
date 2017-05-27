@@ -23,7 +23,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
    
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,6 +41,20 @@
             list-style-type: circle;
         }
 
+				
+		.thumbnail {
+			height: 100px;
+			width: auto;
+			min-width: 50px;
+			display: table;
+		}
+
+		.thumbnail img {
+			height: 100%;
+			width: 100%;
+			display: table-cell;
+			vertical-align: middle;
+		}
     </style>
 
 </head>
@@ -320,11 +333,11 @@
                             <div id="slider">
                                 <!-- Top part of the slider -->
                                 <div class="row">
-                                    <div class="col-md-12" id="carousel-bounding-box">
+                                    <div class="col-xs-12" id="carousel-bounding-box">
                                         <div class="carousel slide" id="myCarousel" data-ride="carousel">
 
                                             <!-- Indicators -->
-                                            <ol class="carousel-indicators col-sm-12">
+                                            <ol class="carousel-indicators col-xs-12">
                                                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                                 <li data-target="#myCarousel" data-slide-to="1"></li>
                                                 <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -357,23 +370,23 @@
                             </div>
                             <!--/Slider-->
 
-                            <div class="row hidden-xs" id="slider-thumbs" style="margin-top: 10px;">
+                            <div class="row" id="slider-thumbs" style="margin-top: 10px;">
                                 <!-- Bottom switcher of slider -->
                                 <ul class="hide-bullets" style="margin: auto;">
-                                    <li class="col-sm-2">
-                                        <a class="thumbnail" id="carousel-selector-0"><img src="img/project-photos/1.jpg" alt="image"></a>
+                                    <li class="col-xs-2">
+                                        <a class="thumbnail" id="carousel-selector-0"><img class="img-responsive" src="img/project-photos/1.jpg" alt="image"></a>
                                     </li>
-                                    <li class="col-sm-2">
-                                        <a class="thumbnail" id="carousel-selector-1"><img src="img/project-photos/2.jpg" alt="image"></a>
+                                    <li class="col-xs-2">
+                                        <a class="thumbnail" id="carousel-selector-1"><img  class="img-responsive" src="img/project-photos/2.jpg" alt="image"></a>
                                     </li>
-                                    <li class="col-sm-2">
-                                        <a class="thumbnail" id="carousel-selector-2"><img src="img/project-photos/3.jpg" alt="image"></a>
+                                    <li class="col-xs-2">
+                                        <a class="thumbnail" id="carousel-selector-2"><img  class="img-responsive" src="img/project-photos/3.jpg" alt="image"></a>
                                     </li>
-                                    <li class="col-sm-2">
-                                        <a class="thumbnail" id="carousel-selector-3"><img src="img/project-photos/4.jpg" alt="image"></a>
+                                    <li class="col-xs-2">
+                                        <a class="thumbnail" id="carousel-selector-3"><img  class="img-responsive" src="img/project-photos/4.jpg" alt="image"></a>
                                     </li>
-                                    <li class="col-sm-2">
-                                        <a class="thumbnail" id="carousel-selector-4"><img src="img/project-photos/5.jpg" alt="image"></a>
+                                    <li class="col-xs-2">
+                                        <a class="thumbnail" id="carousel-selector-4"><img  class="img-responsive" src="img/project-photos/5.jpg" alt="image"></a>
                                     </li>
                                 </ul>
                                 
@@ -620,33 +633,6 @@
             </div>
         </div>
     </div>
-    
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            
-			$('#myCarousel').carousel({
-					interval: 5000
-			});
-		
-
-            $('#carousel-text').html($('#slide-content-0').html());
-
-            //Handles the carousel thumbnails
-            $('[id^=carousel-selector-]').click(function() {
-                var id = this.id.substr(this.id.lastIndexOf("-") + 1);
-                var id = parseInt(id);
-                $('#myCarousel').carousel(id);
-            });
-
-
-            // When the carousel slides, auto update the text
-            $('#myCarousel').on('slid.bs.carousel', function(e) {
-                var id = $('.item.active').data('slide-number');
-                $('#carousel-text').html($('#slide-content-' + id).html());
-            });
-        });
-
-    </script>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
