@@ -41,4 +41,18 @@
         });
     });
 
+    function changeImage(value){
+    debugger;
+
+    }
+
+    $(function() {
+     $('.img-thumbnail').click(function(){
+
+       var images = this['src'];
+        $("#mainimg").attr('src',images);
+        return false;
+     });
+    });
+
 })(jQuery); // End of use strict
