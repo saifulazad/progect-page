@@ -1,7 +1,8 @@
 #!/bin/bash
 
-git add .
-git commit -m 'A'
-x = git rev-parse --abbrev-ref HEAD
-echo $x
+#git add .
+#git commit -m 'A'
+x="develop"
+y="$x"
+echo $y
  
