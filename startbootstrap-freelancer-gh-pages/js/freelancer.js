@@ -40,12 +40,7 @@
             $(this).removeClass("floating-label-form-group-with-focus");
         });
     });
-
-    function changeImage(value){
-    debugger;
-
-    }
-
+    // change image on each click 
     $(function() {
      $('.img-thumbnail').click(function(){
 
@@ -54,5 +49,10 @@
         return false;
      });
     });
+    // change date (yyyy) dynamically
+    $(document).ready(function() {
+        $('#current_year').text(new Date().getFullYear('YYYY'));
+    });
+
 
 })(jQuery); // End of use strict
