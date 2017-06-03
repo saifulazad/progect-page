@@ -51,7 +51,7 @@
     });
     // change date (yyyy) dynamically
     $(document).ready(function() {
-        $('#current_year').text(new Date().format('YYYY'));
+        $('#current_year').text(new Date().getFullYear('YYYY'));
     });
 
 
