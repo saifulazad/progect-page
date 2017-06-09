@@ -45,7 +45,7 @@
      $('.img-thumbnail').click(function(){
 
        var images = this['src'];
-        $("#mainimg").attr('src',images);
+        $(this).parent().siblings('img').attr('src',images);
         return false;
      });
     });
