@@ -40,5 +40,19 @@
             $(this).removeClass("floating-label-form-group-with-focus");
         });
     });
+    // change image on each click 
+    $(function() {
+     $('.img-thumbnail').click(function(){
+
+       var images = this['src'];
+        $(this).parent().siblings('img').attr('src',images);
+        return false;
+     });
+    });
+    // change date (yyyy) dynamically
+    $(document).ready(function() {
+        $('#current_year').text(new Date().getFullYear('YYYY'));
+    });
+
 
 })(jQuery); // End of use strict
