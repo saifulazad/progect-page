@@ -83,19 +83,25 @@ gulp.task('browserSync', function() {
 })
 
 
+var folderToMove = [
+        'js',
+        'img',
+        'css',
+        'vendor',
+	'files',
+	];
+
 var filesToMove = [
-        './js/**/*.*',
-        './img/**/*.*',
-        './css/**/*.*',
-        './vendor/**/*.*',
-	'./files/**/*.*',
-	'./index.html',
-	'./404.html',
-    ];
+        './index.html',
+        './404.html',
+	];
+var processToMove =  folderToMove.map(x => './' + x + '/**/*.*')
+
+
 
 //copy files to public 
-gulp.task('copyPublic', function() {
-	 gulp.src(filesToMove, { base: './' })
+gulp.task('copyToPublic', function() {
+	 gulp.src(processToMove.concat(filesToMove), { base: './' })
   	.pipe(gulp.dest('public'));
 })
 
