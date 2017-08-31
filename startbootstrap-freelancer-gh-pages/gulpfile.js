@@ -82,6 +82,23 @@ gulp.task('browserSync', function() {
     })
 })
 
+
+var filesToMove = [
+        './js/**/*.*',
+        './img/**/*.*',
+        './css/**/*.*',
+        './vendor/**/*.*',
+	'./files/**/*.*',
+	'./index.html',
+	'./404.html',
+    ];
+
+//copy files to public 
+gulp.task('copyPublic', function() {
+	 gulp.src(filesToMove, { base: './' })
+  	.pipe(gulp.dest('public'));
+})
+
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
     gulp.watch('less/*.less', ['less']);
