@@ -7,7 +7,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var filter = require('gulp-filter');
 var pkg = require('./package.json');
-
+var tsb = require('gulp-tsb');
 // Set the banner content
 var banner = ['/*!\n',
     ' * Start AAAAAAAAAAAAAAAAAAAAAAAAAa - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
@@ -105,6 +105,31 @@ gulp.task('copyToPublic', function() {
   	.pipe(gulp.dest('public'));
 })
 
+
+var compilation = tsb.create({
+    "compilerOptions": {
+        "module": "system",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outFile": "../../built/local/tsc.js",
+        "sourceMap": true
+    },
+    "include": [
+        "ts/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+});
+
+
+gulp.task('buildTS', function() {
+        return gulp.src('ts/**/*')
+            .pipe(compilation()) // <- new compilation
+            .pipe(gulp.dest('as/'));
+    });
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
     gulp.watch('less/*.less', ['less']);
